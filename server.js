@@ -1,11 +1,11 @@
 const express = require('express');
 
-const RecipesRouter = require('./users/users-router');
+const UsersRouter = require('./users/users-router');
 
 const server = express();
 
 server.use(express.json());
-server.use('/api', RecipesRouter);
+server.use('/api', UsersRouter);
 
 server.get('/', (req, res) => {
     res.json(`index is working`);
